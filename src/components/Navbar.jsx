@@ -19,7 +19,11 @@ const Navbar = () => {
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+
+            <a href={`#${nav.id}`}>
+              {nav.title}
+            </a>
+
           </li>
         ))}
       </ul>
@@ -29,7 +33,9 @@ const Navbar = () => {
           src={toggle ? close : menu}
           alt="menu"
           className="w-[28px] h-[28px] object-contain"
-          onClick={() => setToggle(!toggle)}
+          onClick={() => setToggle(
+            !toggle
+          )}
         />
 
         <div
