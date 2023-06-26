@@ -19,11 +19,7 @@ const Navbar = () => {
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-
-            <a href={`#${nav.id}`}>
-              {nav.title}
-            </a>
-
+            <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
@@ -33,9 +29,7 @@ const Navbar = () => {
           src={toggle ? close : menu}
           alt="menu"
           className="w-[28px] h-[28px] object-contain"
-          onClick={() => setToggle(
-            !toggle
-          )}
+          onClick={() => setToggle(!toggle)}
         />
 
         <div
@@ -51,10 +45,14 @@ const Navbar = () => {
                             font-medium 
                             cursor-pointer 
                             text-[16px] 
-                            ${ active === nav.title ? "text-white" : "text-dimWhite" } 
-                            ${ index === navLinks.length - 1 ? "mb-0" : "mb-4" }
+                            ${
+                              active === nav.title
+                                ? "text-white"
+                                : "text-dimWhite"
+                            } 
+                            ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}
                           `}
-                  onClick={() => setActive(nav.title)}
+                onClick={() => setActive(nav.title)}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>

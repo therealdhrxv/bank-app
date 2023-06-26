@@ -1,41 +1,50 @@
-import React from 'react'
-import styles from './style' 
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonial, Hero } from "./components"; 
+import React from "react";
+import styles from "./style";
+import {
+  Billing,
+  Business,
+  CardDeal,
+  Clients,
+  CTA,
+  Footer,
+  Navbar,
+  Stats,
+  Testimonial,
+  Hero,
+} from "./components";
 
 const App = () => {
   return (
-
-    // The navbar section
-    <div className='bg-primary w-full overflow-hidden'>
-       <div className={`${styles.paddingX} ${styles.flexCenter}`} >
-        <div className={`${styles.boxWidth}`}>
-          {/* Here we'll render our navbar */}
-          <Navbar />
+    <>
+      <div className="bg-primary w-full overflow-hidden">
+        // The navbar section
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+          <div className={`${styles.boxWidth}`}>
+            {/* Here we'll render our navbar */}
+            <Navbar />
+          </div>
         </div>
-      </div>
-
-      {/* The hero section */}
-      <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero />
+        {/* The hero section */}
+        <div className={`bg-primary ${styles.flexStart}`}>
+          <div className={`${styles.boxWidth}`}>
+            <Hero />
+          </div>
         </div>
-      </div>
-
-
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          {/* <Stats /> */}
+        <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+          <div className={`${styles.boxWidth}`}>
+            {/* <Stats />
           <Business  />
           <Billing />
           <CardDeal />
           <Testimonial />
           <Clients />
-          <CTA />
-          <Footer />
+          <CTA />*/}
+            <Footer />
+          </div>
         </div>
-      </div> 
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;
